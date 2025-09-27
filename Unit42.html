@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<style>
+  .responsive-image {
+    width: 100%;
+    height: auto;
+  }
+</style>
+<html>
+  <head>
+    <title>Unit 4</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">Home</a>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <section id="main" class="wrapper">
+        <div class="inner">
+          Unit 4
+          <h1 class="major">Breach Analysis and Mitigation</h1>
+          <h3>Scanning and Collaborative Wiki Activity</h3>
+
+          <p>
+            <b>
+              Instructions Perform scans against your assigned website(s) using
+              the tools available in Kali Linux. Answer as many of the following
+              questions as you can: What Operating System does the website
+              utilise? What web server software is it running? Is it running a
+              CMS (Wordpress, Drupal, etc?) What protection does it have (CDN,
+              Proxy, Firewall?) Where is it hosted? Does it have any open ports?
+              Which did you expect to be open? Does the site have any known
+              vulnerabilities? What versions of software is it using? Are these
+              patched so that they are up to date? The wiki should consist of
+              two sections: Did you have any issues or challenges with the
+              scans? How did you overcome them? How will they affect your final
+              report? Record all reflections in your e-portfolio.
+            </b>
+          </p>
+
+          <h3>RESPONSE</h3>
+          <p>
+            The OS is not explicitly stated but since the website is run on
+            ASP.NET it is safe to assume it is a Windows Server of some sort
+            running with IIS. In terms of protection is has some XSS filters but
+            lacks many of the required ones. The website has known
+            vulnerabilities such as TLS 1.0/1.1 enabled as well as a lack of
+            CSRF, unencrypted cookies as well as server version disclosure. It
+            does not however reveal where it is hosted or which ports are
+            currently being used and/or are open.
+          </p>
+
+          <h3>REFLECTION</h3>
+          <p>
+            The main challenges were using new tools that I was unfamiliar with
+            as well as now fully understanding the scope of the tools. These
+            were such as using testssl.sh to gather information but not knowing
+            what to fully expect from the test. This made interpreting the
+            results significantly harder as not having done the test before
+            makes it so there’s no baseline to compare the results to. More
+            specifically it was not knowing if the tests came out as empty
+            responses or negative responses. For example, a test would not state
+            the server version, but because of the unfamiliarity of the tools, I
+            was unsure if it was due to proper configurations on the server or
+            the usage of the wrong tools and or configurations of the tools. My
+            solution was to use others websites as a baseline. I would run the
+            tools on other websites to see what would be expected results from
+            bad examples and good examples. For the bad example I would use a
+            simple mock site I created in the past with no security planning,
+            and for the good examples I would you proper sites such as Google
+            and such. This would give me a baseline of how the tools are used
+            and what is to be expected of them
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

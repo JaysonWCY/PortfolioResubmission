@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Unit 3</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">Home</a>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <section id="main" class="wrapper">
+        <div class="inner">
+          Unit 3
+          <h1 class="major">Unit 3: Vulnerability Assessments</h1>
+          <h3>Scanning Activity</h3>
+
+          <p>
+            <b>
+            Using the website(s) assigned to you in Unit 1, carry out the
+            following exercises and answer the questions listed below. Ideally,
+            you should complete this task before the next seminar, where it will
+            be discussed further. Your findings/results from this exercise will
+            be utilised specifically for the preparation of the
+            <em
+              >'Vulnerability Audit and Assessment - Results and Executive
+              Summary'</em
+            >
+            assessment in Unit 6.
+            </b>
+          </p>
+
+          <h2>Instructions</h2>
+          <p>
+             <b>
+            Perform a basic scan using standard tools such as
+            <code>traceroute</code>, <code>dig</code> and <code>nslookup</code>.
+            Please see these instructions on using traceroute, etc. Refer to
+            this week's reading for further assistance.
+            <strong>Do not use ping</strong> as it will cause confusion because
+            of shared addresses.
+            </b>
+          </p>
+
+          <p>
+             <b>
+            Use these basic tools and make a list that details the following
+            information:
+            </b>
+          </p>
+          <ul>
+            <b>
+            <li>How many hops from your machine to your assigned website?</li>
+            <li>
+              Which step causes the biggest delay in the route? What is the
+              average duration of that delay?
+            </li>
+            <li>What are the main nameservers for the website?</li>
+            <li>Who is the registered contact?</li>
+            <li>What is the MX record for the website?</li>
+            <li>Where is the website hosted?</li>
+            </b>
+          </ul>
+
+          <h3>RESPONSE</h3>
+
+          <p>
+            Using tracert showed that the website is 5 hops away from my
+            machine. Most steps are less than 5 ms but after the third hop it
+            raised to 18ms and then 99ms. With nslookup the server is unknown.
+            Using dig provides that the website is hosted on the server names
+            of: rob.ns.cloudflare.com. leah.ns.cloudflare.com. All these tools
+            also provide the public IP of the host. However, the Ips are hosted
+            by cloudflare and the origin server is probably behind a reverse
+            proxy. The website also has no MX as it doesn’t send out any email.
+            The scans show very little, with the most exposing information is
+            the name of host servers being rob and lead, which may be sensitive
+            information for the host. While the Ip are exposed, it is most
+            likely proxied IP hosted by cloudflare and can not be used to do
+            harm.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
